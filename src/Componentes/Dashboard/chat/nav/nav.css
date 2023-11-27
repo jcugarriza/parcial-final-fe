@@ -1,0 +1,102 @@
+@charset "UTF-8";
+.nav {
+  max-width: 985px;
+  height: 660px;
+  display: flex;
+  flex-direction: column;
+  left: 0px;
+  padding: 20px;
+  padding-top: 30px;
+  background-color: var(--color-black);
+  border-radius: var(--br-81xl);
+}
+.nav .nav__blocks {
+  color: var(--color-white);
+  margin-top: 20px;
+}
+.nav .nav__blocks button {
+  margin-left: 60px;
+  margin-bottom: 20px;
+  color: var(--color-white);
+  border: none; /* Elimina el borde */
+  background: none; /* Elimina el fondo */
+  padding: 0; /* Elimina el espacio interno */
+  font-size: inherit; /* Hereda el tamaño de fuente del elemento padre (por defecto) */
+  cursor: pointer; /* Cambia el cursor al puntero al pasar el ratón sobre el botón */
+  text-decoration: none; /* Elimina subrayado si el botón está dentro de un enlace <a> */
+}
+.nav .nav__blocks .profile__card {
+  background-color: transparent;
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: scale(0);
+  animation-name: showIn;
+  animation-duration: 0.2s; /* or: Xms */
+  animation-iteration-count: 1;
+  animation-direction: normal; /* or: normal */
+  animation-timing-function: cubic-bezier(0.17, 0.67, 0.12, 1.53); /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+  animation-fill-mode: both; /* or: backwards, both, none */
+  animation-delay: 0.3s; /* or: Xms */
+}
+.nav .nav__blocks .profile__card .user_profile_image {
+  padding: 20px 20px;
+}
+.nav .nav__blocks .profile__card .user_profile_image .profile__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.nav .nav__blocks .profile__card .user_profile_image .profile__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 138px;
+  min-height: 133px;
+}
+.nav .nav__blocks .profile__card h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 20px;
+  text-align: center;
+  color: var(--color-white);
+}
+.nav .nav__blocks .profile__card p {
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--color-white);
+}
+.nav .salir-parent {
+  position: absolute;
+  top: 590px;
+  left: 165px;
+  width: 106.06px;
+  height: 56px;
+  text-align: center;
+  color: var(--color-white);
+  cursor: pointer;
+}
+.nav .salir-parent .salir {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 300px;
+  font-size: var(--font-size-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 56px;
+}
+.nav .salir-parent .log-out-icon {
+  position: absolute;
+  top: 17px;
+  left: 65px;
+  width: 23.06px;
+  height: 22px;
+  overflow: hidden;
+}/*# sourceMappingURL=nav.css.map */

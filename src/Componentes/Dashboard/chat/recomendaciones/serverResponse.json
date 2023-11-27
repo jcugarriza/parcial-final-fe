@@ -1,0 +1,55 @@
+{
+  "errors": "",
+  "message": "",
+  "result": {
+    "score_range": "5.0-4.6",
+    "strongest_dimensions": [
+      {
+        "dimension_description": "Servicios asociados al éxito académico es una categoría que engloba los diversos recursos y apoyos ofrecidos para promover el rendimiento y el logro académico de los estudiantes. Estos servicios pueden incluir tutorías, asesoramiento académico, talleres de habilidades de estudio, acceso a bibliotecas y recursos educativos, programas de mentoría, servicios de orientación vocacional, entre otros. El propósito de esta categoría es brindar a los estudiantes las herramientas y el apoyo necesario para alcanzar el éxito en su trayectoria educativa.",
+        "dimension_id": 3,
+        "dimension_name": "Servicios ofertados por la universidad",
+        "position": 1,
+        "recommendations": [
+          "Consultar información en la página de la universidad en las secciones del CREE, OFE y Registro.",
+          "Atender en horario de oficina las oficinas del CREE, OFE y Registro."
+        ],
+        "value": 1
+      }
+    ],
+    "success_probability": "SOBRESALIENTE",
+    "user_id": 100,
+    "weakest_dimensions": [
+      {
+        "dimension_description": "Participación en servicios universitarios se refiere a la implicación activa de los estudiantes en actividades y servicios ofrecidos por la universidad, como clubes estudiantiles, programas de liderazgo y eventos culturales. Esto fomenta el aprendizaje, el desarrollo personal y fortalece el sentido de comunidad en el entorno universitario.",
+        "dimension_id": 4,
+        "dimension_name": "Participacion en servicios universitarios",
+        "position": 1,
+        "recommendations": [
+          "Recomendacion para Participacion en servicios universitarios 1"
+        ],
+        "value": 0.33
+      },
+      {
+        "dimension_description": "Factores asociados al éxito académico es una categoría que se enfoca en identificar y analizar los diferentes elementos que influyen en el rendimiento y logro académico de los estudiantes. Esta categoría abarca aspectos como el ambiente familiar, la motivación, las estrategias de estudio, el apoyo educativo, la autoestima, entre otros factores relevantes. El objetivo principal es comprender cómo estos elementos pueden influir positivamente en el éxito académico de los estudiantes.",
+        "dimension_id": 2,
+        "dimension_name": "Factores asociados al éxito académico",
+        "position": 2,
+        "recommendations": [
+          "Consultar asignaturas extracurriculares ofrecidas por los diferentes departamentos.",
+          "Solicitar apoyo académico con el CREE."
+        ],
+        "value": 0.63
+      },
+      {
+        "dimension_description": "La Apropiación se refiere al manejo que el estudiante hace de los servicios y plataformas proporcionadas por la universidad, así como a su comunicación con los profesores.",
+        "dimension_id": 7,
+        "dimension_name": "Apropiación",
+        "position": 3,
+        "recommendations": [
+          "Recomendacion para Apropiación 1"
+        ],
+        "value": 0.68
+      }
+    ]
+  }
+}
