@@ -1,7 +1,7 @@
 import './App.css'
 import React from 'react';
-import Client from './Componentes/Dashboard/chat/C-Body'
-import Admin from './Componentes/Dashboard/chat/Asistente/asistente'
+import ClientBody from './Componentes/ClientBody/ClientBody'
+import AdminBody from './Componentes/AdminBody/AdminBody'
 import Login from './Componentes/Login/Login'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -16,11 +16,11 @@ const router = createBrowserRouter([
   },
   {
     path:'/admin',
-    element:<div><Admin/></div>
+    element:<div><AdminBody/></div>
   },
   {
     path:'/client',
-    element: <div><Client/></div>
+    element: <div><ClientBody/></div>
   },
 ])
 

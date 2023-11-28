@@ -1,0 +1,16 @@
+#topbanner {
+    background-color: #555555;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+}
+
+#topbanner-title {
+    color: white;
+    font-weight: bolder;
+    font-size: 42px;
+}
