@@ -7,6 +7,7 @@ import Pagination from '@mui/material/Pagination';
 import TextField from "@mui/material/TextField";
 import ArticleList from "../Shared/ArticleList/ArticleList"
 import AdminControls from "../Shared/AdminControls/AdminControls";
+import searchBg from "../../assets/Search/gradient.png";
 
 const MAX_ARTICLES_PER_PAGE = 10;
 const LOCAL_STORAGE_INDEX = "1";
@@ -65,6 +66,7 @@ function AdminBody() {
         bannerText="¡Bienvenido al Marketplace de ReactJS, Admin!"
       />
       <div id="admin-dashboard">
+        <img className="admin-search-bg" src={searchBg} alt="searchBg"/>
         <div className="admin-search-container">
           <div className="admin-search-div">
             <TextField

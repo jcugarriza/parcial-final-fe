@@ -5,6 +5,7 @@ import PromotionalBanner from "./../Shared/PromotionalBanner/PromotionalBanner";
 import Pagination from '@mui/material/Pagination';
 import TextField from "@mui/material/TextField";
 import List from "../Shared/ArticleList/ArticleList"
+import searchBg from "../../assets/Search/gradient.png";
 
 const MAX_ARTICLES_PER_PAGE = 10;
 const LOCAL_STORAGE_INDEX = "1";
@@ -63,6 +64,7 @@ function ClientBody() {
         bannerText="¡Bienvenido al Marketplace de ReactJS, Cliente!"
       />
       <div id="client-dashboard">
+        <img className="client-search-bg" src={searchBg} alt="searchBg"/>
         <div className="search-container">
           <div className="search-div">
             <TextField
