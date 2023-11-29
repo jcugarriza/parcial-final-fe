@@ -16,9 +16,9 @@ function CreateArticleTopBanner(props) {
   }
 
   return (
-    <div id="topbanner">
-      <div id="topbanner-content-div">
-        <h1 id="topbanner-title">Agregar nuevo artículo</h1>
+    <div id="create-article-topbanner">
+      <div id="create-article-topbanner-content-div">
+        <h1 id="create-article-topbanner-title">Agregar nuevo artículo</h1>
         <div id="create-article-topbanner-buttons">
           <button type="button" className="create-article-topbanner-button" id="create-article-topbanner-back-button" onClick={takeUserBackToAdminBody}>
             Volver a vista de Admin

@@ -11,26 +11,56 @@ const LOCAL_STORAGE_INDEX = "1";
 const FIRST_PAGE = 1;
 
 function ClientBody() {
-  var storedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_INDEX));
-  let totalPageCount = Math.floor(Object.keys(storedData).length / MAX_ARTICLES_PER_PAGE + 1);
-
   const [desiredPageNumber, setPageNumber] = useState(1);
   const onPageChange = (e, page) => {
     setPageNumber(page);
   }
 
-  const [inputText, setInputText] = useState("");
+  const [storedData, setStoredData] = useState(JSON.parse(localStorage.getItem(LOCAL_STORAGE_INDEX)));
+  const onStoredDataChange = (newData) => {
+    setStoredData(newData);
+    return newData;
+  }
+
+  const [storedDataFiltered, setStoredDataFiltered] = useState(storedData);
+  const onFilterChange = (inputText, data) => {
+    const rawFilteredData = data.filter((el) => {
+      //if no input the return the original
+      if (inputText === '') {
+        return el;
+      }
+      //return the item which contains the user input
+      else {
+        let lowerCaseArticleTitle = el.article_title.toLowerCase();
+        return lowerCaseArticleTitle.includes(inputText) || lowerCaseArticleTitle == inputText;
+      }     
+    })
+    setStoredDataFiltered(rawFilteredData);
+    return rawFilteredData;
+  }
+
+  const [totalPageCount, setTotalPageCount] = useState(Math.floor(Object.keys(storedData).length / MAX_ARTICLES_PER_PAGE + 1));
+  const onTotalPageCountChange = (newCount) => {
+    setTotalPageCount(newCount);
+  }
+
   let inputHandler = (e) => {
+    let newStoredData = onStoredDataChange(JSON.parse(localStorage.getItem(LOCAL_STORAGE_INDEX)))
+    console.log(newStoredData);
+
     var lowerCase = e.target.value.toLowerCase();
-    setInputText(lowerCase);
     setPageNumber(FIRST_PAGE);
+
+    let newFilteredData = onFilterChange(lowerCase, newStoredData);
+    console.log(newFilteredData)
+    let newPageCount = Math.floor(Object.keys(newFilteredData).length / MAX_ARTICLES_PER_PAGE + 1);
+    onTotalPageCountChange(newPageCount);
   };
 
   return (
     <div id="client-body">
       <TopBanner
         bannerText="¡Bienvenido al Marketplace de ReactJS, Cliente!"
-        userType="client"
       />
       <div id="client-dashboard">
         <div className="search-container">
@@ -50,11 +80,10 @@ function ClientBody() {
         <div className="client-spacer"></div>
         <div id="client-presection-div">
           <List
-            input={inputText}
             checkboxBool="true"
             articleListMaxPageArticleCount={MAX_ARTICLES_PER_PAGE}
             desiredPageNumber={desiredPageNumber}
-            data={storedData}
+            data={storedDataFiltered}
           />
         </div>
       </div>

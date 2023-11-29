@@ -13,7 +13,8 @@ function List(props) {
     let dataFetchIndexUpperLimit = dataFetchIndexLowerLimit + props.articleListMaxPageArticleCount - ARTICLE_LIST_STARTING_INDEX;
 
     const filteredData = props.data.filter((el) => {
-        if (el.id >= dataFetchIndexLowerLimit && el.id <= dataFetchIndexUpperLimit) {
+        let elIndex = props.data.findIndex(x => x.id == el.id) + 1;
+        if (elIndex >= dataFetchIndexLowerLimit && elIndex <= dataFetchIndexUpperLimit) {
             return el;
         }        
     })

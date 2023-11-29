@@ -2,7 +2,7 @@ import React from "react";
 import "./TopBanner.css";
 import { useNavigate } from 'react-router-dom';
 
-function TopBanner({ bannerText, userType }) {
+function TopBanner({ bannerText }) {
   const navigateTo = useNavigate();
 
   const logoutUser = (e) => {

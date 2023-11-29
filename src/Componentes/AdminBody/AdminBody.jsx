@@ -12,42 +12,50 @@ const MAX_ARTICLES_PER_PAGE = 10;
 const LOCAL_STORAGE_INDEX = "1";
 const FIRST_PAGE = 1;
 
-function AdminBody() {
-  var storedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_INDEX));
-  let initialTotalPageCount = Math.floor(Object.keys(storedData).length / MAX_ARTICLES_PER_PAGE + 1);
-  
+function AdminBody() {  
   const [desiredPageNumber, setPageNumber] = useState(1);
   const onPageChange = (e, page) => {
     setPageNumber(page);
   }
 
+  const [storedData, setStoredData] = useState(JSON.parse(localStorage.getItem(LOCAL_STORAGE_INDEX)));
+  const onStoredDataChange = (newData) => {
+    setStoredData(newData);
+    return newData;
+  }
+
   const [storedDataFiltered, setStoredDataFiltered] = useState(storedData);
-  const onStoredDataChange = (inputText) => {
-    const rawFilteredData = storedData.filter((el) => {
+  const onFilterChange = (inputText, data) => {
+    const rawFilteredData = data.filter((el) => {
       //if no input the return the original
       if (inputText === '') {
         return el;
       }
       //return the item which contains the user input
       else {
-          return el.article_title.toLowerCase().includes(inputText)
+        let lowerCaseArticleTitle = el.article_title.toLowerCase();
+        return lowerCaseArticleTitle.includes(inputText) || lowerCaseArticleTitle == inputText;
       }     
     })
     setStoredDataFiltered(rawFilteredData);
     return rawFilteredData;
   }
 
-  const [totalPageCount, setTotalPageCount] = useState(initialTotalPageCount);
+  const [totalPageCount, setTotalPageCount] = useState(Math.floor(Object.keys(storedData).length / MAX_ARTICLES_PER_PAGE + 1));
   const onTotalPageCountChange = (newCount) => {
     setTotalPageCount(newCount);
   }
 
   let inputHandler = (e) => {
+    let newStoredData = onStoredDataChange(JSON.parse(localStorage.getItem(LOCAL_STORAGE_INDEX)))
+    console.log(newStoredData);
+
     var lowerCase = e.target.value.toLowerCase();
     setPageNumber(FIRST_PAGE);
 
-    let newData = onStoredDataChange(lowerCase);
-    let newPageCount = Math.floor(Object.keys(newData).length / MAX_ARTICLES_PER_PAGE + 1);
+    let newFilteredData = onFilterChange(lowerCase, newStoredData);
+    console.log(newFilteredData)
+    let newPageCount = Math.floor(Object.keys(newFilteredData).length / MAX_ARTICLES_PER_PAGE + 1);
     onTotalPageCountChange(newPageCount);
   };
 
@@ -55,13 +63,12 @@ function AdminBody() {
     <div id="client-body">
       <TopBanner
         bannerText="¡Bienvenido al Marketplace de ReactJS, Admin!"
-        userType="client"
       />
-      <div id="client-dashboard">
-        <div className="search-container">
-          <div className="search-div">
+      <div id="admin-dashboard">
+        <div className="admin-search-container">
+          <div className="admin-search-div">
             <TextField
-              id="search-text-field"
+              id="admin-search-text-field"
               onChange={inputHandler}
               variant="outlined"
               fullWidth

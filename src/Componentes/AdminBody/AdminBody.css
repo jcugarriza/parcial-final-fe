@@ -15,8 +15,34 @@
 }
 
 #admin-dashboard {
-    display: flex;
+    padding: 60px 50px 60px 50px;
     width: 100%;
-    padding: 15px;
-    background-color: #ff6655;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-search-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 350px;
+    width: 50%;
+    background-image: url('src/assets/Search/gradient.png');
+    background-position: center;
+    border-radius: 8px;
+    border: 0px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    padding: 30px 45px;
+}
+
+.admin-search-div {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+}
+
+#admin-search-text-field {
+    border-radius: 6px;
+    border: 0px;
 }
