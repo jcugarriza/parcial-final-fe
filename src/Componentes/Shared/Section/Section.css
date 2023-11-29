@@ -1,9 +1,0 @@
-.section-container {
-    background-color: white;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 25px;
-}

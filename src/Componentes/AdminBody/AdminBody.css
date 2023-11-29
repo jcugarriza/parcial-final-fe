@@ -10,9 +10,8 @@
 
 #admin-controls {
     display: flex;
+    margin-top: 15px;
     width: 100%;
-    padding: 15px 15px 0px 15px;
-    background-color: #ff6655;
 }
 
 #admin-dashboard {

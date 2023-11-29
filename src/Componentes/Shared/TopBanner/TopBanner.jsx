@@ -9,18 +9,13 @@ function TopBanner({ bannerText, userType }) {
     e.preventDefault()
     navigateTo('/login')
   }
-  
-  const buttonStyle = {
-    backgroundColor: userType == 'admin' ? '#ff6655' : 'aquamarine',
-    color: 'black',
-    padding: '5px 10px',
-    fontSize: '18px'
-  }
 
   return (
     <div id="topbanner">
-      <h1 id="topbanner-title">{bannerText}</h1>
-      <button type="button" id="logout" onClick={logoutUser} style={buttonStyle}>Volver a Login</button>
+      <div id="topbanner-content-div">
+        <h1 id="topbanner-title">{bannerText}</h1>
+        <button type="button" id="logout-button" onClick={logoutUser}>Volver a Login</button>
+      </div>
     </div>
   );
 };

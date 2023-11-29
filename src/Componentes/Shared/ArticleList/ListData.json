@@ -1,0 +1,106 @@
+[
+    {
+        "id": 1,
+        "article_title": "Devpulse",
+        "article_subtitle": "Duración: 7hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$49.900",
+        "article_author_name": "Juan C. Ugarriza"
+    },
+    {
+        "id": 2,
+        "article_title": "Curso de JavaScript",
+        "article_subtitle": "Duración: 8hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$59.900",
+        "article_author_name": "Wendy T. Montaña"
+    },
+    {
+        "id": 3,
+        "article_title": "Curso de React.js",
+        "article_subtitle": "Duración: 9hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$69.900",
+        "article_author_name": "Juan Teherán"
+    },
+    {
+        "id": 4,
+        "article_title": "Devpulse4",
+        "article_subtitle": "Duración: 6hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$79.900",
+        "article_author_name": "Juan C. Ugarriza"
+    },
+    {
+        "id": 5,
+        "article_title": "Devpulse5",
+        "article_subtitle": "Duración: 9hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$69.900",
+        "article_author_name": "Juan C. Ugarriza"
+    },
+    {
+        "id": 6,
+        "article_title": "Devpulse6",
+        "article_subtitle": "Duración: 6hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$79.900",
+        "article_author_name": "Juan C. Ugarriza"
+    },
+    {
+        "id": 7,
+        "article_title": "Curso de JavaScript7",
+        "article_subtitle": "Duración: 8hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$59.900",
+        "article_author_name": "Wendy T. Montaña"
+    },
+    {
+        "id": 8,
+        "article_title": "Curso de React.js8",
+        "article_subtitle": "Duración: 9hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$69.900",
+        "article_author_name": "Juan Teherán"
+    },
+    {
+        "id": 9,
+        "article_title": "Devpulse9",
+        "article_subtitle": "Duración: 6hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$79.900",
+        "article_author_name": "Juan C. Ugarriza"
+    },
+    {
+        "id": 10,
+        "article_title": "Devpulse10",
+        "article_subtitle": "Duración: 9hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$69.900",
+        "article_author_name": "Juan C. Ugarriza"
+    },
+    {
+        "id": 11,
+        "article_title": "Devpulse11",
+        "article_subtitle": "Duración: 6hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$79.900",
+        "article_author_name": "Juan C. Ugarriza"
+    },
+    {
+        "id": 12,
+        "article_title": "Devpulse12",
+        "article_subtitle": "Duración: 9hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$69.900",
+        "article_author_name": "Juan C. Ugarriza"
+    },
+    {
+        "id": 13,
+        "article_title": "Devpulse13",
+        "article_subtitle": "Duración: 9hrs",
+        "article_institution": "Universidad del Norte",
+        "article_price_amount": "COP$69.900",
+        "article_author_name": "Juan C. Ugarriza"
+    }
+] 

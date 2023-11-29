@@ -24,7 +24,7 @@
     max-width: 700px;
 }
 
-#logout-button {
+.create-article-topbanner-button {
     background-color: #af1317;
     color: white;
     font-size: 16px;
@@ -35,9 +35,10 @@
     border-radius: 10px;
     border: 0px;
     text-wrap: nowrap;
+    margin-left: 30px;
 }
 
-#logout-button:hover {
+.create-article-topbanner-button:hover {
     transition: 0.4s;
     background-color: #FBEBA5;
     color: black;

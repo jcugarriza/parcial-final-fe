@@ -7,12 +7,12 @@ function AdminControls() {
 
   const addArticle = (e) => {
     e.preventDefault()
-    navigateTo('/login')
+    navigateTo('/createarticle')
   }
 
   const removeArticles = (e) => {
     e.preventDefault()
-    navigateTo('/login')
+    navigateTo('/createarticle')
   }
 
   return (

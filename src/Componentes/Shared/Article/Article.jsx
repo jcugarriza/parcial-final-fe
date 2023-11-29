@@ -3,7 +3,7 @@ import "./Article.css";
 import miniature from "../../../assets/ChatAssets/robot.jpg";
 import avatar from "../../../assets/ChatAssets/Asistente.png";
 
-function Article ({ onClickFunction, displayCheckbox }) {
+function Article ({ onClickFunction, displayCheckbox, articleTitle, articleSubtitle, articleInstitution, articlePriceAmount, articleAuthorName }) {
     if (displayCheckbox) {
         return (
             <div className="article">
@@ -12,19 +12,19 @@ function Article ({ onClickFunction, displayCheckbox }) {
                 </div>
                 <div className="article-info">
                     <div className="article-middle-text">
-                        <h1 className="article-title">Curso de JavaScript</h1>
-                        <h3 className="article-subtitle">Duración: 7 hrs</h3>
+                        <h1 className="article-title">{articleTitle}</h1>
+                        <h3 className="article-subtitle">{articleSubtitle}</h3>
                     </div>
                     <div className="article-pricing">
-                        <div className="article-origin">Universidad del Norte</div>
-                        <div className="article-amount">$54.900</div>
+                        <div className="article-origin">{articleInstitution}</div>
+                        <div className="article-amount">{articlePriceAmount}</div>
                     </div>
                     <div className="article-line"></div>
                     <div className="article-rating">
                         <div className="article-avatar">
                             <img className="article-avatar-img" src={avatar} alt="avatar"/>
                         </div>
-                        <div className="article-username">Prof. Juan Teherán</div>
+                        <div className="article-username">{articleAuthorName}</div>
                     </div>
                 </div>
                 <input type="checkbox" className="article-checkbox" onClick={onClickFunction}/>
@@ -38,19 +38,19 @@ function Article ({ onClickFunction, displayCheckbox }) {
                 </div>
                 <div className="article-info">
                     <div className="article-middle-text">
-                        <h1 className="article-title">Curso de JavaScript</h1>
-                        <h3 className="article-subtitle">Duración: 7 hrs</h3>
+                        <h1 className="article-title">{articleTitle}</h1>
+                        <h3 className="article-subtitle">{articleSubtitle}</h3>
                     </div>
                     <div className="article-pricing">
-                        <div className="article-origin">Universidad del Norte</div>
-                        <div className="article-amount">$54.900</div>
+                        <div className="article-origin">{articleInstitution}</div>
+                        <div className="article-amount">{articlePriceAmount}</div>
                     </div>
                     <div className="article-line"></div>
                     <div className="article-rating">
                         <div className="article-avatar">
                             <img className="article-avatar-img" src={avatar} alt="avatar"/>
                         </div>
-                        <div className="article-username">Prof. Juan Teherán</div>
+                        <div className="article-username">{articleAuthorName}</div>
                     </div>
                 </div>
             </div>
