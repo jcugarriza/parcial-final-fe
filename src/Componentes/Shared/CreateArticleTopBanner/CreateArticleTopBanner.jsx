@@ -1,6 +1,7 @@
 import React from "react";
 import "./CreateArticleTopBanner.css";
 import { useNavigate } from 'react-router-dom';
+import bannerBg from "../../../assets/TopBanner/bq.jpeg";
 
 function CreateArticleTopBanner(props) {
   const navigateTo = useNavigate();
@@ -17,6 +18,7 @@ function CreateArticleTopBanner(props) {
 
   return (
     <div id="create-article-topbanner">
+      <img className="create-article-topbanner-bg" src={bannerBg} alt="bannerBg"/>
       <div id="create-article-topbanner-content-div">
         <h1 id="create-article-topbanner-title">Agregar nuevo artículo</h1>
         <div id="create-article-topbanner-buttons">

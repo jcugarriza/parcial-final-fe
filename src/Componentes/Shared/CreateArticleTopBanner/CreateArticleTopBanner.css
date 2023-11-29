@@ -1,11 +1,19 @@
 #create-article-topbanner {
-    background-image: url('src/assets/TopBanner/bq.jpeg');
     width: 100%;
     height: 350px;
     display: flex;
     flex-direction: row;
     align-items: end;
     padding: 0px 10%;
+}
+
+.create-article-topbanner-bg {
+    object-fit: cover;
+    position: absolute;
+    height: 350px;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 #create-article-topbanner-content-div {
