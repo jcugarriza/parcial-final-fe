@@ -4,7 +4,7 @@ import TopBanner from "./../Shared/TopBanner/TopBanner";
 import PromotionalBanner from "./../Shared/PromotionalBanner/PromotionalBanner";
 import Pagination from '@mui/material/Pagination';
 import TextField from "@mui/material/TextField";
-import List from "../Shared/ArticleList/ArticleList"
+import ArticleList from "../Shared/ArticleList/ArticleList"
 import searchBg from "../../assets/Search/gradient.png";
 
 const MAX_ARTICLES_PER_PAGE = 10;
@@ -40,21 +40,19 @@ function ClientBody() {
     return rawFilteredData;
   }
 
-  const [totalPageCount, setTotalPageCount] = useState(Math.floor(Object.keys(storedData).length / MAX_ARTICLES_PER_PAGE + 1));
+  const [totalPageCount, setTotalPageCount] = useState(Math.ceil(Object.keys(storedData).length / MAX_ARTICLES_PER_PAGE));
   const onTotalPageCountChange = (newCount) => {
     setTotalPageCount(newCount);
   }
 
   let inputHandler = (e) => {
     let newStoredData = onStoredDataChange(JSON.parse(localStorage.getItem(LOCAL_STORAGE_INDEX)))
-    console.log(newStoredData);
 
     var lowerCase = e.target.value.toLowerCase();
     setPageNumber(FIRST_PAGE);
 
     let newFilteredData = onFilterChange(lowerCase, newStoredData);
-    console.log(newFilteredData)
-    let newPageCount = Math.floor(Object.keys(newFilteredData).length / MAX_ARTICLES_PER_PAGE + 1);
+    let newPageCount = Math.ceil(Object.keys(newFilteredData).length / MAX_ARTICLES_PER_PAGE);
     onTotalPageCountChange(newPageCount);
   };
 
@@ -70,10 +68,10 @@ function ClientBody() {
             <TextField
               id="search-text-field"
               onChange={inputHandler}
-              variant="outlined"
+              variant="filled"
               fullWidth
               label="Buscar artículos"
-              color="primary"
+              color="secondary"
             />
           </div>
         </div>
@@ -81,11 +79,12 @@ function ClientBody() {
         <PromotionalBanner id="client-promotional-banner"/>
         <div className="client-spacer"></div>
         <div id="client-presection-div">
-          <List
-            checkboxBool="true"
+          <ArticleList
+            checkboxBool={false}
             articleListMaxPageArticleCount={MAX_ARTICLES_PER_PAGE}
             desiredPageNumber={desiredPageNumber}
             data={storedDataFiltered}
+            userType="client"
           />
         </div>
       </div>

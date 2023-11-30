@@ -4,11 +4,7 @@ import "./ArticleList.css";
 
 const ARTICLE_LIST_STARTING_INDEX = 1;
 
-function List(props) {
-    const articleClick = (e) => {
-        console.log(e);
-    }
-    
+function List(props) {    
     let dataFetchIndexLowerLimit = (props.desiredPageNumber - 1) * props.articleListMaxPageArticleCount + ARTICLE_LIST_STARTING_INDEX;
     let dataFetchIndexUpperLimit = dataFetchIndexLowerLimit + props.articleListMaxPageArticleCount - ARTICLE_LIST_STARTING_INDEX;
 
@@ -19,11 +15,11 @@ function List(props) {
         }        
     })
     return (
-        <ul id="article-list-ul">
+        <ul className="article-list-ul">
             {filteredData.map((item) => (
-                <li key={item.id} className='article-list-li'>
+                <li id={(props.userType + '-article-num-' + item.id)} key={item.id} className='article-list-li'>
                     <Article
-                        onClickFunction={articleClick}
+                        onClickFunction={props.articleClick}
                         displayCheckbox={props.checkboxBool}
                         articleTitle={item.article_title}
                         articleSubtitle={item.article_subtitle}

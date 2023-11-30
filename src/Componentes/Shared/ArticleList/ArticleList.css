@@ -1,4 +1,4 @@
-#article-list-ul {
+.article-list-ul {
     display: flex;
     height: 100%;
     width: 100%;

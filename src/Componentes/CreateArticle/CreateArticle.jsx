@@ -29,7 +29,13 @@ function CreateArticle() {
         } else {
             let localStorageArticles = JSON.parse(localStorage.getItem(LOCAL_STORAGE_INDEX));
 
-            let newId = localStorageArticles[localStorageArticles.length - 1].id;
+            let newId;
+            if (localStorageArticles.length == 0) {
+                newId = 1;
+            } else {
+                newId = localStorageArticles[localStorageArticles.length - 1].id;
+            }
+            
             let newArticle = new ArticleDataObject(newId + 1, articleTitle, articleSubtitle, articleInstitution, articlePrice, articleAuthor);
             let dataToInsert = JSON.stringify(newArticle.toArray());
             

@@ -27,7 +27,7 @@ const Login = () => {
           <div className="textdiv">
             <h2 className="title">¡Bienvenido al Marketplace de ReactJS!</h2>
             <p>
-              Parcial final para la materia de Desarrollo Web Frontend del semestre 2023-30 por parte del estudiante Juan Ugarriza. Basado en la página realizada para Proyecto Final de Ingeniería de Sistemas del mismo estudiante.
+              Parcial final para la materia de Desarrollo Web Frontend del semestre 2023-30 por parte del estudiante Juan Ugarriza
             </p>
           </div>
         </div>

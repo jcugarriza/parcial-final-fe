@@ -27,7 +27,7 @@ function Article ({ onClickFunction, displayCheckbox, articleTitle, articleSubti
                         <div className="article-username">{articleAuthorName}</div>
                     </div>
                 </div>
-                <input type="checkbox" className="article-checkbox" onClick={onClickFunction}/>
+                <input action="" type="checkbox" className="article-checkbox" onClick={onClickFunction}/>
             </div>
         );
     } else {
